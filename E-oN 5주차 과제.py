@@ -1,6 +1,6 @@
 # E-oN 5주차 과제
 
-arr1 = list(map(int, input("수를 여러 개 입력하세요 : ").split())) # 배열 arr에 정수 요소 입력
+arr1 = list(map(int, input("수를 여러 개 입력하세요 : ").split())) # 배열 arr1에 정수 요소 입력
 
 print(arr1)
 
