@@ -31,7 +31,7 @@ class Book:
                 break
             else:
                 print("번호를 다시 입력하세요.")
-                break
+                myBook.menu()
                 
     def add_book(self): # 도서 등록
         print(bookDB.lines)
