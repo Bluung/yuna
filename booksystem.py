@@ -45,6 +45,7 @@ class Book:
         str_book = " ".join(list_book) # 리스트를 문자열로 결합
         bookDB.lines.append(str_book) # bookDB.lines 리스트에 요소 추가
         print("등록되었습니다.")
+        myBook.save_book()
 
     def search_book(self): # 도서 검색
         a = []
@@ -87,6 +88,7 @@ class Book:
         line_num = int(input("수정할 도서의 줄 번호를 입력하세요. : "))
         modify_a = input("수정할 도서명, 저자, 출판연도, 출판사명, 장르를 입력하세요.(공백으로 구분) : ")
         bookDB.lines[line_num - 1] = modify_a + '\n'
+        myBook.save_book()
         
     def delete_book(self): # 도서 삭제
         myBook.show_book()
@@ -95,6 +97,7 @@ class Book:
             if line_num == i:
                 bookDB.lines.pop(i-1) # (i-1)번째 요소 삭제
         print("삭제되었습니다.")
+        myBook.save_book()
         
     def show_book(self): # 현재 도서 목록 출력
         print("현재 도서 목록입니다.")
@@ -108,6 +111,7 @@ class Book:
         with open("C:\python\input.txt", "w") as file:
             for b in bookDB.lines:
                 file.write(b)
+        print("저장되었습니다.")
 
 myBook = Book() # 클래스 변수
 
